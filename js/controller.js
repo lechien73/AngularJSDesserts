@@ -17,10 +17,10 @@ angular.module("RouteControllers", [])
         
         $scope.save = function() {
             $scope.desserts.push($scope.dessert);
-            $location.path("/");
+            $location.path(".");
         }
         $scope.cancel = function() {
-            $location.path("/");
+            $location.path(".");
         }
     })
     .controller("EditController", function($scope, $location, $routeParams) {
@@ -29,10 +29,10 @@ angular.module("RouteControllers", [])
         $scope.title = "Edit dessert";
         
         $scope.save = function() {
-            $location.path("/");
+            $location.path(".");
         }
         $scope.cancel = function() {
-            $location.path("/");
+            $location.path(".");
         }
     })
     .controller("DeleteController", function($scope, $location, $routeParams) {

@@ -1,20 +1,20 @@
-angular.module('dessertsApp', ['ngRoute', 'RouteControllers']);
+angular.module("dessertsApp", ["ngRoute", "RouteControllers"]);
  
-angular.module('dessertsApp').config(function($locationProvider, $routeProvider) {
-    $locationProvider.html5Mode(true);  // Enable href routing without hashes
+angular.module("dessertsApp").config(function($locationProvider, $routeProvider) {
+    $locationProvider.html5Mode(true);
  
-    $routeProvider.when('/', {
-        templateUrl: 'templates/home.html'
+    $routeProvider.when(".", {
+        templateUrl: "templates/home.html"
     })
-    .when("/add", {
+    .when("add", {
         templateUrl: "templates/add.html",
         controller: "AddController"
     })
-    .when("/edit/:id", {
+    .when("edit/:id", {
         templateUrl: "templates/add.html",
         controller: "EditController"
     })
-    .when("/delete/:id", {
+    .when("delete/:id", {
         templateUrl: "templates/add.html",
         controller: "DeleteController"
     });
